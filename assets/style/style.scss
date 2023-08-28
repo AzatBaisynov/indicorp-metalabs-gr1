@@ -1,0 +1,131 @@
+@import "./reset";
+@import "./fonts.scss";
+
+/* BASE CONF */
+:root {
+	--dark-background-color: #252B42;
+	--disabled-element-color: #8EC2F2;
+	--light-color: #FFFFFF;
+	--primary-color: #FFA62B;
+	--second-text-color: #737373;
+	--secondary-color-1: #00A0C1;
+	--secondary-color-2: #16697A;
+	--text-color: #252B42;
+	--light-bg-color: #fafafa;
+	--grey-color: #252B42;
+	--light-blue-color: #21A6DF;
+	--dark-blue-color: #335BF5;
+	--light-grey-color: #DEDEDE;
+	--hot-red-color: #E42F08;
+	--violet-color: #E51F5A;
+	--usual-grey-color: #F3F3F3;
+	--light-white-color: #F9F9F9;
+}
+body {
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+.container {
+	max-width: 1080px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.d-flex {
+	display: flex;
+}
+.align-center {
+	align-items: center;
+}
+.justify {
+	&-center {
+		justify-content: center;
+	}
+	&-between {
+		justify-content: space-between;
+	}
+}
+/* BASE CONF */
+/* HEADER SECTION */
+.header {
+	position: absolute;
+	width: 100%;
+	top: 36px;
+	z-index: 1;
+	&__logo {
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 32px;
+		letter-spacing: 0.1px;
+		display: inline-block;
+		margin-right: 117px;
+		color: var(--text-color);
+	}
+	&__link {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 24px;
+		letter-spacing: 0.2px;
+		color: var(--second-text-color);
+		&:not(:last-child) {
+			margin-right: 21px;
+		}
+	}
+}
+/* HEADER SECTION */
+/* HERO SECTION */
+.hero {
+	position: relative;
+	height: 100vh;
+	background: url('../images/hero-bg.jpeg') no-repeat center/cover;
+	padding: 184px 0;
+	&__title {
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 80px;
+    letter-spacing: 0.2px;
+    color: var(--text-color);
+		max-width: 509px;
+  }
+	&__desc {
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 30px; /* 150% */
+		letter-spacing: 0.2px;
+		color: var(--second-text-color);
+		max-width: 376px;
+		margin: 35px 0;
+	}
+	&__btn {
+		padding: 10px 36px;
+		border-radius: 37px;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 28px;
+		letter-spacing: 0.2px;
+		&_orange {
+			background-color: var(--primary-color);
+			color: var(--light-color);
+			border: 1px solid var(--primary-color);
+			margin-right: 10px;
+		}
+		&_sky {
+			color: var(--secondary-color-1);
+			border: 1px solid var(--secondary-color-1);
+		}
+	}
+	&__wrapper {
+		position: absolute;
+		width: 100%;
+		bottom: -20px;
+	}
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 30px;
+	}
+	&__card {
+		background-color: var(--light-color);
+		padding: 35px 0 35px 40px;
+		box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+	}
+}
+/* HERO SECTION */
